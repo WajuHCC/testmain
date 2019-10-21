@@ -12,4 +12,4 @@ print(napis5)
 
 dlugosc = len(napis1)
 print(dlugosc)
-print()
+print(napis3)
