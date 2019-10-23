@@ -13,4 +13,7 @@ print(s[::3]) #caly string co 3-ci znak
 #reverse w Pythonie
 print(s[::-1])
 
+print("zajecia dzis sie nie odbędą")
+
+
 
