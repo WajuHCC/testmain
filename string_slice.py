@@ -15,5 +15,20 @@ print(s[::-1])
 
 print("zajecia dzis sie nie odbędą")
 
+print("hello"+"world")
+a="Hello"
+b="ALX"
+print(f"{a}{b}")
+print(f"{a} {b}")
+
+x=input("Podaj wartość x")
+x=int(x)
+print(x,type(x)) #jesli jest input to zawsze zwraca "string"
+
+
+
+
+
+
 
 
