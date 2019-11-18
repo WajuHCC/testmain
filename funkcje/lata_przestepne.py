@@ -5,6 +5,7 @@ rok przestepny jest co 4 lata o ile nie dzieli sie przez 100 z wyjatkiem podziel
 
 
 """
-
+def czy_przestepny(rok):
+    if rok%4 == 0
 def test_lata_przestepne():
     assert lata_przestepne(2020, 2030) == [2020, 2024, 2028]
