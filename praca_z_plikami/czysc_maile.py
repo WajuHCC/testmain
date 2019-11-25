@@ -13,7 +13,7 @@ def czysc(input_file, output_file):
         for email in lista:
             g.write(email + "\n")
 
-czysc("emails.txt", "result.txt")
+czysc(input_file, output_file)
 
 
 
