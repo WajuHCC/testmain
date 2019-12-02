@@ -14,10 +14,22 @@
 #
 # """
 class Product:
-    def __init__Product(self, id, name, price):
-        self.id = id
+
+    _NEXT_ID = 1  #atrybut klasowy (gdyby zaczynalo sie od podkreslenia to jest to zmienna prywatna i powinna byc
+    # modyfikowana wylacznie poprzez metody)
+    def __init__Product(self, name, price):
+        self.id = Product.NEXT_ID  #pobiera atrybut klasowy
         self.name = name
         self.price = price
+        self.incr_next_id()
+
+    @classmethod
+    def incr_next_id(cls):
+        cls.NEXT_ID += 1
+
+    @classmethod
+    def get_id(cls):
+        return cls._NEXT_ID
 
     def show(self):
         print(self.name, self.id, self.price)
