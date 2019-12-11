@@ -17,6 +17,25 @@ class Employee:
         self._registered_hours = 0
         return to_pay
 
+class PremiumEmployee(Employee):
+
+    def __init__(self, f_name, l_name, rph):
+        super().__init__(f_name, l_name, rph)
+        self.bonuses = []
+
+    def give_bonus(self, bonus):
+        self.bonuses.append(bonus)
+
+    def pay_salary(self):
+        to_pay = super().pay_salary()
+        for b in self.bonuses:
+            if isinstance(b, int):
+                to_pay += b
+            else:
+                to_pay = b * to_pay
+            self.bonuses = []
+        return to_pay
+
 emp = Employee("Jan", "Kowalski", 200)
 print(emp._registered_hours)
 emp._registered_hours = 10
