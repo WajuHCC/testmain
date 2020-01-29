@@ -1,3 +1,6 @@
+from django.shortcuts import render
+
+# Create your views here.
 from django.http import HttpResponse
 
 def funkcja_widoku(request):
@@ -34,3 +37,6 @@ def sum(request, op, liczba1, liczba2): #praca domowa
     return HttpResponse(wynik)
 
 #/sum/1/2 - uwaga bo
+
+def index(request):
+    return HttpResponse("Hello world! That's polls index")
